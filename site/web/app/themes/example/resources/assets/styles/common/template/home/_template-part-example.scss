@@ -1,0 +1,9 @@
+.example {
+  background-color: white;
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .example {
+    background-color: white;
+  }
+}
