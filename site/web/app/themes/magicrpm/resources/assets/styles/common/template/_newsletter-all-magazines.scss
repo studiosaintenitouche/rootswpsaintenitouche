@@ -1,0 +1,21 @@
+.newsletter-all-magazines {
+  margin: 4rem 0 6rem 0;
+
+  &__container {
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .newsletter-all-magazines {
+    margin: 12rem 0 6rem 0;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 2rem;
+    }
+  }
+}

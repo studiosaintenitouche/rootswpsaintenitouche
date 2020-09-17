@@ -1,0 +1,323 @@
+.nav__menu {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999999;
+  align-items: center;
+
+  .menu {
+    &__title {
+      font-size: 0;
+    }
+
+    &__list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      .menu-item {
+        padding: 0 0.5em;
+        text-transform: uppercase;
+        height: 3rem;
+        display: flex;
+
+        &.menu-shop {
+          background-color: $black;
+          padding: 0;
+
+          a {
+            font-size: 0;
+            padding: 0;
+            height: 3rem;
+            width: 3rem;
+            background-image: url(../images/icons/magazine_boutique.svg);
+            background-repeat: no-repeat;
+            background-size: 2rem;
+            background-position: 50% 50%;
+            transition: 0.2s ease;
+            position: relative;
+
+            &::before {
+              content: "boutique";
+              position: absolute;
+              bottom: 0.25rem;
+              width: inherit;
+              height: 1rem;
+              z-index: 99999999999999;
+              color: white;
+              opacity: 0;
+              font-size: 0.75rem;
+              line-height: 1.3rem;
+              text-align: center;
+              transform: translateY(0.5rem);
+              transition: 0.2s ease;
+            }
+          }
+
+          &:hover {
+            a {
+              background-position: 50% 30%;
+
+              &::before {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+
+        a {
+          font-size: 1.2em;
+          padding: 0 0.4rem;
+          display: block;
+          line-height: 3rem;
+        }
+      }
+    }
+
+    &__toggle {
+      display: block;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 0;
+      width: 50px;
+      height: 30px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 0.5rem;
+        width: 1.8rem;
+        background-color: $black;
+        transition: 0.3s ease;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 0.5rem;
+        width: 1.8rem;
+        background-color: $black;
+        transition: 0.3s ease;
+      }
+    }
+
+    &__primary {
+      display: none;
+      background-color: white;
+      font-family: $sans-serif;
+
+      .menu-item.active {
+        a {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% - 2rem);
+            background-color: black;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+
+    &__mobile {
+      display: none;
+      position: absolute;
+      width: 100vw;
+      left: 0;
+      height: calc(100vh - 4rem);
+      background-color: $black;
+      top: 4rem;
+      color: white;
+
+      .menu {
+        &__list {
+          display: flex;
+          height: calc(86vh - 4rem);
+          flex-direction: column;
+          justify-content: space-evenly;
+          padding: 2vh 0;
+        }
+
+        &-item {
+          a {
+            color: white;
+            font-family: $sans-serif;
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            padding: 0;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: calc(100% + 2rem);
+              height: 100%;
+              top: 0;
+              left: -1rem;
+              background-size: cover;
+              background-repeat: no-repeat;
+              z-index: -1;
+            }
+          }
+
+          &.menu-news {
+            a {
+              &::before {
+                background-image: url(../images/icons/menu-mobile--news.svg);
+              }
+            }
+          }
+
+          &.menu-longs-formats {
+            a {
+              &::before {
+                background-image: url(../images/icons/menu-mobile--longs-formats.svg);
+              }
+            }
+          }
+
+          &.menu-sorties {
+            a {
+              &::before {
+                background-image: url(../images/icons/menu-mobile--sorties.svg);
+              }
+            }
+          }
+
+          &.menu-chroniques {
+            a {
+              &::before {
+                background-image: url(../images/icons/menu-mobile--chroniques.svg);
+              }
+            }
+          }
+
+          &.menu-playlists {
+            a {
+              &::before {
+                background-image: url(../images/icons/menu-mobile--playlists.svg);
+              }
+            }
+          }
+
+          &.menu-videos {
+            a {
+              &::before {
+                background-image: url(../images/icons/menu-mobile--playlists.svg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav.nav--single.nav--longs-formats {
+  .menu {
+    &__primary {
+      background-color: $orange;
+    }
+  }
+}
+
+.menu-mobile--active {
+  overflow: hidden;
+
+  .nav__menu {
+    .menu {
+      &__toggle {
+        &::before {
+          left: auto;
+          right: 0;
+          top: 0;
+        }
+
+        &::after {
+          content: "";
+          left: 0;
+          right: auto;
+        }
+      }
+
+      &__mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .nav__menu {
+    .menu {
+      &__toggle {
+        display: none;
+      }
+
+      &__primary {
+        display: block;
+      }
+
+      &__mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 75rem) {
+  .nav__menu {
+    .menu {
+      &__list {
+        .menu-item {
+          height: 4rem;
+
+          &.menu-shop {
+            a {
+              height: 4rem;
+              width: 4rem;
+              background-size: 3rem;
+
+              &::before {
+                content: "boutique";
+                position: absolute;
+                bottom: 0.25rem;
+                width: inherit;
+                height: 1rem;
+                z-index: 99999999999999;
+                color: white;
+                opacity: 0;
+                font-size: 0.75rem;
+                line-height: 1rem;
+                text-align: center;
+                transform: translateY(0.5rem);
+                transition: 0.2s ease;
+              }
+            }
+          }
+
+          a {
+            line-height: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+

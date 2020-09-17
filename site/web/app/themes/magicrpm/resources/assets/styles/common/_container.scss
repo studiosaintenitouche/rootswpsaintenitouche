@@ -1,0 +1,39 @@
+.container {
+  max-width: $mobile-width-default-container;
+}
+
+.container--header {
+  max-width: $mobile-width-default-container;
+}
+
+.container--footer {
+  max-width: $mobile-width-default-container;
+}
+
+.plr-container {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+}
+
+.mzauto {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .plr-container {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+  }
+
+  .container {
+    max-width: $desktop-width-default-container;
+  }
+
+  .container--header {
+    max-width: $desktop-width-default-container;
+  }
+
+  .container--footer {
+    max-width: $desktop-width-default-container;
+  }
+}

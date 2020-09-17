@@ -1,0 +1,152 @@
+.nav {
+  width: 100%;
+  z-index: 9999999999;
+  position: absolute;
+  background-color: white;
+  top: 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: $mobile-nav-height;
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+}
+
+.nav--scroll-down,
+.nav--scroll-up {
+  position: fixed;
+  transform: translateY(-100%);
+  width: 100vw;
+}
+
+.nav--hidden {
+  transition: 0.5s ease;
+  animation-timing-function: ease;
+  transform: translateY(-150%);
+
+  .nav__container {
+    height: 90px;
+  }
+
+  .nav__menu {
+    .menu {
+      box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.1);
+
+      &__list {
+        .menu-item {
+          a {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav--sticky {
+  transform: translateY(0);
+  transition: 0.5s ease;
+
+  .nav__menu {
+    .menu {
+      box-shadow: none;
+    }
+  }
+}
+
+.nav__logo-social-medias {
+  display: flex;
+}
+
+@import "header/logo";
+@import "header/social-medias";
+@import "header/menu";
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .nav {
+    background-color: transparent;
+
+    &__container {
+      height: $desktop-nav-height;
+      max-width: 95vw;
+    }
+  }
+
+  .nav--scroll-down,
+  .nav--scroll-up {
+    position: fixed;
+    transform: translateY(-100%);
+
+    .nav__logo {
+      width: 0;
+      margin: 0;
+    }
+  }
+
+  .nav--sticky {
+    transform: translateY(0);
+    transition: 0.5s ease;
+
+    .nav__container {
+      height: 90px;
+    }
+
+    .nav__menu {
+      .menu {
+        box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.1);
+
+        &__list {
+          .menu-item {
+            height: 3rem;
+
+            a {
+              line-height: 3rem;
+              font-size: 1.2rem;
+            }
+
+            &.menu-shop {
+              background-color: $black;
+              padding: 0;
+
+              a {
+                height: 3rem;
+                width: 3rem;
+                background-size: 2rem;
+                font-size: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav--imnotanad-cover-active {
+    background-color: white;
+
+    .nav {
+      &__container {
+        display: flex;
+        align-items: center;
+        height: $desktop-nav-cover-height;
+        max-width: 99vw;
+        margin: 0 0 0 1vw;
+      }
+    }
+
+    &.nav--sticky {
+      background-color: transparent;
+
+      .nav__container {
+        margin: 0 2vw;
+      }
+    }
+
+    &.nav--hidden {
+      background-color: transparent;
+    }
+  }
+}
+

@@ -1,0 +1,41 @@
+.article {
+  &--news {
+    .article__header {
+      &::before {
+        background-color: $red;
+      }
+    }
+  }
+
+  &--videos {
+    .article__header {
+      &::before {
+        background-color: $azur;
+      }
+    }
+  }
+
+  &--chroniques {
+    .article__header {
+      &::before {
+        background-color: $purple;
+      }
+    }
+  }
+
+  &--sorties {
+    .article__header {
+      &::before {
+        background-color: $green;
+      }
+    }
+  }
+
+  &--playlists {
+    .article__header {
+      &::before {
+        background-color: $marine;
+      }
+    }
+  }
+}

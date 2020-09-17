@@ -1,0 +1,53 @@
+.article {
+  position: relative;
+
+  &__image-container {
+    display: flex;
+    position: relative;
+    min-height: 8rem;
+  }
+
+  &__image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+
+  &__category {
+    &-name {
+      color: white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__credits {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem 0 1rem;
+  }
+
+  &__media-credits {
+    padding-right: 1rem;
+    border-right: 8px solid black;
+    line-height: 1.5rem;
+    text-align: right;
+  }
+
+  &__header {
+    padding: 7rem 0 0 0;
+  }
+}
+
+@import "article/article-colors";
+@import "article/default";
+@import "article/longforms";
+@import "article/preview";
+@import "article/single";
+@import "article/chroniques";
+@import "article/album";

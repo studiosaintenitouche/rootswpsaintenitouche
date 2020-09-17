@@ -1,0 +1,220 @@
+# Translation of Plugins - Crop-Thumbnails - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Crop-Thumbnails - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-22 08:42:30+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Crop-Thumbnails - Stable (latest release)\n"
+
+#: functions/settingsscreen.php:79
+msgid "User Permission"
+msgstr "Droit utilisateur"
+
+#: functions/editor.php:82 functions/save.php:297
+msgid "You are not permitted to crop the thumbnails."
+msgstr "Vous n’avez pas les droits nécessaires pour recadrer les miniatures."
+
+#: functions/settingsscreen.php:81
+msgid "When active, only users who are able to edit files can crop thumbnails. Otherwise (default), any user who can upload files can also crop thumbnails."
+msgstr "Quand activé, seuls les utilisateurs avec les droits pour modifier des fichiers peuvent recadrer les miniatures. Sinon (par défaut), tout utilisateur qui peut télécharger des fichiers peut également recadrer les miniatures."
+
+#: functions/editor.php:79
+msgid "Not yet cropped by WordPress."
+msgstr "Pas encore recadré par WordPress."
+
+#: functions/settingsscreen.php:100
+msgid "Choose the image sizes you do not want to show, if the user uses the button below the featured image box."
+msgstr "Choisissez les tailles d’image que vous ne voulez pas afficher, si l’utilisateur utilise le bouton situé sous la boîte de l’image mise en avant."
+
+#: functions/settingsscreen.php:101
+msgid "Hide Crop-Thumbnails button below the featured image?"
+msgstr "Masquer le bouton de Crop-Thumbnails sous les images mises en avant ?"
+
+#: functions/editor.php:81
+msgid "The plugin can not correctly connect to the server."
+msgstr "L’extension ne peut pas se connecter correctement au serveur."
+
+#: functions/editor.php:70
+msgid "Step 2: Change the selection of the image above."
+msgstr "Étape 2 : Modifiez la sélection de l’image ci-dessus."
+
+#. Description of the plugin
+msgid "The easy way to adjust your cropped image sizes."
+msgstr "La façon la plus simple d’ajuster la taille de vos images recadrées."
+
+#: functions/editor.php:80
+msgid "This image has an image orientation value in its exif-metadata. Be aware that this may result in rotatated or mirrored images on safari ipad / iphone."
+msgstr "Cette image a une valeur d’orientation d’image dans ses métadonnées exif. Sachez que cela peut entraîner une rotation ou un miroir des images sur Safari des iPads / iPhones."
+
+#: functions/settingsscreen.php:27 functions/settingsscreen.php:41
+msgid "Settings"
+msgstr "Paramètres"
+
+#: functions/settingsscreen.php:48 functions/settingsscreen.php:107
+#: functions/settingsscreen.php:115 functions/settingsscreen.php:140
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#: functions/editor.php:77
+msgid "cropped"
+msgstr "redimensionné"
+
+#. Author URI of the plugin
+msgid "https://www.totalmedial.de"
+msgstr "https://www.totalmedial.de"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/extend/plugins/crop-thumbnails/"
+msgstr "https://wordpress.org/extend/plugins/crop-thumbnails/"
+
+#: functions/save.php:102
+msgid "Can't delete temporary file."
+msgstr "Impossible de supprimer ce ficher temporaire."
+
+#: functions/save.php:98
+msgid "Can't copy temporary file to media library."
+msgstr "Impossible de copier ce fichier temporaire dans la bibliothèque de médias."
+
+#: functions/editor.php:66
+msgid "Raw"
+msgstr "Brut"
+
+#. Author of the plugin
+msgid "Volkmar Kantor"
+msgstr "Volkmar Kantor"
+
+#: functions/settingsscreen.php:91
+msgid "Enable Data-Debug."
+msgstr "Activer JS-Debug."
+
+#: functions/settingsscreen.php:89
+msgid "Enable JS-Debug."
+msgstr "Activer JS-Debug."
+
+#: functions/editor.php:63
+msgid "Warning: the original image is too small to be cropped in good quality with this thumbnail size."
+msgstr "Avertissement : l’image originale est trop petite pour être recadrée en bonne qualité avec cette taille de miniature."
+
+#: functions/editor.php:65
+msgid "Please wait until the images are cropped."
+msgstr "Veuillez attendre que les images soient recadrées."
+
+#: functions/editor.php:67
+msgid "pixel"
+msgstr "pixel"
+
+#: functions/editor.php:72
+msgid "Save Crop"
+msgstr "Enregistrer le recadrage"
+
+#: functions/editor.php:68
+msgid "Quick Instructions"
+msgstr "Instructions rapides"
+
+#: functions/editor.php:69
+msgid "Step 1: Choose an image-size from the list."
+msgstr "Étape 1: Choisissez une taille d’image dans la liste."
+
+#: functions/editor.php:71
+msgid "Step 3: Click on \"Save Crop\"."
+msgstr "Étape 3: Cliquez sur « Enregistrer le recadrage »."
+
+#: functions/editor.php:73
+msgid "Crop all images with same ratio at once"
+msgstr "Recadrer toutes les images avec le même ratio en une seule fois"
+
+#: functions/editor.php:74
+msgid "deselect all"
+msgstr "Tout désélectionner"
+
+#: functions/editor.php:78
+msgid "Original image size too small for good crop quality!"
+msgstr "L’image originale est trop petite pour être recadrée en bonne qualité de recadrage !"
+
+#: functions/editor.php:75
+msgid "Dimensions:"
+msgstr "Dimensions :"
+
+#: functions/editor.php:76
+msgid "Ratio:"
+msgstr "Ratio :"
+
+#: functions/save.php:90
+msgid "Can't generate filesize '%s'."
+msgstr "Impossible de générer le fichier de taille « %s »."
+
+#: functions/save.php:282
+msgid "ERROR: Security Check failed (maybe a timeout - please try again)."
+msgstr "ERREUR : échec du contrôle de sécurité (peut-être un temps mort - veuillez réessayer)."
+
+#: functions/save.php:287 functions/save.php:293 functions/save.php:301
+msgid "ERROR: Submitted data is incomplete."
+msgstr "ERREUR : les données soumises sont incomplètes."
+
+#: functions/save.php:311
+msgid "Cropping to these dimensions on this image is not possible."
+msgstr "Le recadrage à ces dimensions sur cette image n’est pas possible."
+
+#: functions/save.php:318
+msgid "ERROR: Can't find original image in database!"
+msgstr "ERREUR : Impossible de trouver l’image originale dans la base de données !"
+
+#: functions/save.php:31
+msgid "ERROR: Can't find original image file!"
+msgstr "ERREUR : Impossible de trouver l’image originale !"
+
+#: functions/save.php:37
+msgid "ERROR: Can't find original image metadata!"
+msgstr "ERREUR : Impossible de trouver les métadonnées de l’image originale !"
+
+#: functions/settingsscreen.php:53
+msgid "Support the plugin author"
+msgstr "Soutenir l’auteur de l’extension"
+
+#: functions/settingsscreen.php:54
+msgid "You can support the plugin author (and let him know you love this plugin) by donating via Paypal. Thanks a lot!"
+msgstr "Vous pouvez soutenir l’auteur de l’extension (et lui faire savoir que vous aimez cette extension) en faisant un don via PayPal. Merci beaucoup !"
+
+#: functions/settingsscreen.php:76
+msgid "Sizes and Post Types"
+msgstr "Tailles et types de publication"
+
+#: functions/settingsscreen.php:84
+msgid "Plugin Test"
+msgstr "Test de l’extension"
+
+#: functions/settingsscreen.php:87
+msgid "Developer Settings"
+msgstr "Réglages développeur"
+
+#: functions/settingsscreen.php:122
+msgid "Crop-Thumbnails is designed to make cropping images easy. For some post types, not all crop sizes are needed, but the plugin will automatically create all the crop sizes. Here you can select which crop sizes are available in the cropping interface for each post type.."
+msgstr "Crop-Thumbnails est conçu pour faciliter le recadrage des images. Pour certains types de publications, toutes les tailles de recadrage ne sont pas nécessaires, mais l’extension créera automatiquement toutes les tailles de recadrage. Ici, vous pouvez sélectionner les tailles de recadrage disponibles dans l’interface de recadrage pour chaque type de publications."
+
+#: functions/settingsscreen.php:123
+msgid "Crop-Thumbnails will only show cropped images. Sizes with no crop will always be hidden."
+msgstr "Les miniatures ne montreront que des images recadrées. Les tailles sans recadrage seront toujours cachées."
+
+#: functions/settingsscreen.php:34
+msgid "Crop Post Thumbnail Page"
+msgstr "Page de recadrage des miniatures d’article"
+
+#. Plugin Name of the plugin
+msgid "Crop Thumbnails"
+msgstr "Crop Thumbnails"
+
+#: functions/backendpreparer.php:79 functions/backendpreparer.php:80
+#: functions/backendpreparer.php:135 functions/backendpreparer.php:136
+#: functions/backendpreparer.php:182 functions/backendpreparer.php:243
+#: functions/backendpreparer.php:244
+msgid "Crop Featured Image"
+msgstr "Recadrer l’image mise en avant"
+
+#: functions/editor.php:64
+msgid "Cropping is disabled for this post-type."
+msgstr "Le recadrage est désactivé pour ce type de publication."

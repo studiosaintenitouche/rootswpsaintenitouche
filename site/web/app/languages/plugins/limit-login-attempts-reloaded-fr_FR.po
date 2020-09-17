@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Limit Login Attempts Reloaded - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-08-31 06:10:34+0000\n"
+"PO-Revision-Date: 2020-04-13 16:43:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,22 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Limit Login Attempts Reloaded - Stable (latest release)\n"
+
+#: views/tab-debug.php:36
+msgid "Copy the contents of the window and provide to support."
+msgstr "Copier le contenu de la fenêtre et le fournir au support."
+
+#: views/options-page.php:19
+msgid "Debug"
+msgstr "Déboguer"
+
+#: views/options-page.php:18
+msgid "Settings"
+msgstr "Paramètres"
+
+#: views/tab-debug.php:33
+msgid "Debug info"
+msgstr "Information de Debug"
 
 #: views/tab-settings.php:174
 msgid "Trusted IP Origins"
@@ -19,7 +35,7 @@ msgstr "Origines des IP de confiance"
 msgid "Specify the origins you trust in order of priority, separated by commas. We strongly recommend that you <b>do not</b> use anything other than REMOTE_ADDR since other origins can be easily faked. Examples: HTTP_X_FORWARDED_FOR, HTTP_CF_CONNECTING_IP, HTTP_X_SUCURI_CLIENTIP"
 msgstr "Indiquez les origines auxquelles vous faites confiance par ordre de priorité, séparées par des virgules. Nous vous recommandons fortement <b>de ne pas</b> utiliser autre chose que REMOTE_ADDR car d'autres origines peuvent être facilement falsifiées. Exemples : HTTP_X_FORWARDED_FOR, HTTP_CF_CONNECTING_IP, HTTP_X_SUCURI_CLIENTIP"
 
-#: core/LimitLoginAttempts.php:1013
+#: core/LimitLoginAttempts.php:1039
 msgid "You can also try <a href=\"%s\">resetting your password</a> and that should help you to log in."
 msgstr "Vous pouvez également essayer de <a href=\"%s\">réinitialiser votre mot de passe</a> et cela devrait vous aider à vous connecter."
 
@@ -39,11 +55,11 @@ msgstr "WPChef"
 msgid "https://wpchef.org"
 msgstr "https://wpchef.org"
 
-#: core/LimitLoginAttempts.php:1349
+#: core/LimitLoginAttempts.php:1375
 msgid "The \""
 msgstr "Le «"
 
-#: core/LimitLoginAttempts.php:1082
+#: core/LimitLoginAttempts.php:1108
 msgid "<strong>ERROR</strong>: Incorrect email address or password."
 msgstr "<strong>ERREUR </strong>: Adresse de messagerie ou mot de passe incorrect."
 
@@ -59,7 +75,7 @@ msgstr "cela rend l'extension conforme au <a href=\"https://gdpr-info.eu/\" targ
 msgid "Save Options"
 msgstr "Enregistrer les options"
 
-#: core/LimitLoginAttempts.php:1393
+#: core/LimitLoginAttempts.php:1419
 msgid "Options saved."
 msgstr "Options enregistrées."
 
@@ -134,23 +150,23 @@ msgstr "Nombre total de verrouillages"
 msgid "Statistics"
 msgstr "Statistiques"
 
-#: core/LimitLoginAttempts.php:1108
+#: core/LimitLoginAttempts.php:1134
 msgid "WC Error"
 msgstr "Erreur WC"
 
-#: core/LimitLoginAttempts.php:1010
+#: core/LimitLoginAttempts.php:1036
 msgid "Please try again in %d minute."
 msgid_plural "Please try again in %d minutes."
 msgstr[0] "Veuillez réessayer dans %d minute."
 msgstr[1] "Veuillez réessayer dans %d minutes."
 
-#: core/LimitLoginAttempts.php:748
+#: core/LimitLoginAttempts.php:774
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minute"
 msgstr[1] "%d minutes"
 
-#: core/LimitLoginAttempts.php:742
+#: core/LimitLoginAttempts.php:768
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d heure"
@@ -168,7 +184,7 @@ msgstr "Notifier au verrouillage"
 msgid "Options"
 msgstr "Options"
 
-#: core/LimitLoginAttempts.php:1008
+#: core/LimitLoginAttempts.php:1034
 msgid "Please try again in %d hour."
 msgid_plural "Please try again in %d hours."
 msgstr[0] "Veuillez réessayer dans %d heure."
@@ -182,7 +198,7 @@ msgstr "verrouillages"
 msgid "%d IP is currently blocked from trying to log in"
 msgstr "L’adresse IP %d est actuellement bloquée et ne peut plus se connecter."
 
-#: core/LimitLoginAttempts.php:759
+#: core/LimitLoginAttempts.php:785
 msgid "[%s] Too many failed login attempts"
 msgstr "[%s] Trop d’échecs de tentatives de connexion"
 
@@ -194,15 +210,15 @@ msgstr "Utiliser les réglages généraux"
 msgid "Tried to log in as"
 msgstr "Tentative de connexion en tant que"
 
-#: core/LimitLoginAttempts.php:774
+#: core/LimitLoginAttempts.php:800
 msgid "IP was blocked for %s"
 msgstr "L’adresse IP a été bloquée pour %s"
 
-#: core/LimitLoginAttempts.php:1299
+#: core/LimitLoginAttempts.php:1325
 msgid "Reset lockout count"
 msgstr "Réinitialiser le nombre de verrouillages"
 
-#: core/LimitLoginAttempts.php:1000
+#: core/LimitLoginAttempts.php:1026
 msgid "Please try again later."
 msgstr "Veuillez réessayer ultérieurement."
 
@@ -214,11 +230,11 @@ msgstr "Un identifiant par ligne"
 msgid "allowed retries"
 msgstr "tentatives autorisées"
 
-#: core/LimitLoginAttempts.php:1292
+#: core/LimitLoginAttempts.php:1318
 msgid "Cleared IP log"
 msgstr "Journal des IP effacé"
 
-#: core/LimitLoginAttempts.php:755
+#: core/LimitLoginAttempts.php:781
 msgid "[%s] Failed login attempts from whitelisted IP"
 msgstr "[%s] Échec des tentatives de connexion depuis les IP en liste blanche"
 
@@ -234,7 +250,7 @@ msgstr "Réglages de Limit Login Attempts"
 msgid "minutes lockout"
 msgstr "minutes de verrouillage"
 
-#: core/LimitLoginAttempts.php:768
+#: core/LimitLoginAttempts.php:794
 msgid "Last user attempted: %s"
 msgstr "Dernière tentative de l’utilisateur : %s"
 
@@ -242,11 +258,11 @@ msgstr "Dernière tentative de l’utilisateur : %s"
 msgid "Let network sites use their own settings"
 msgstr "Laisser les sites en réseau utiliser leurs propres réglages"
 
-#: core/LimitLoginAttempts.php:1306
+#: core/LimitLoginAttempts.php:1332
 msgid "Cleared current lockouts"
 msgstr "Verrouillages actuels nettoyés"
 
-#: core/LimitLoginAttempts.php:772
+#: core/LimitLoginAttempts.php:798
 msgid "IP was NOT blocked because of external whitelist."
 msgstr "L'IP n’a pas été bloquée à cause de la liste blanche externe."
 
@@ -254,7 +270,7 @@ msgstr "L'IP n’a pas été bloquée à cause de la liste blanche externe."
 msgid "Limit Login Attempts Reloaded"
 msgstr "Limit Login Attempts Reloaded"
 
-#: core/LimitLoginAttempts.php:365 core/LimitLoginAttempts.php:1167
+#: core/LimitLoginAttempts.php:391 core/LimitLoginAttempts.php:1193
 msgid "<strong>%d</strong> attempt remaining."
 msgid_plural "<strong>%d</strong> attempts remaining."
 msgstr[0] "<strong>%d</strong> tentative restante."
@@ -264,15 +280,15 @@ msgstr[1] "<strong>%d</strong> tentatives restants."
 msgid "If disabled, the global settings will be forcibly applied to the entire network."
 msgstr "Si cette option est désactivée, les réglages globaux seront appliqués de force à l’ensemble du réseau."
 
-#: core/LimitLoginAttempts.php:764
+#: core/LimitLoginAttempts.php:790
 msgid "%d failed login attempts (%d lockout(s)) from IP: %s"
 msgstr "%d tentatives d’accès ont échouées (%d bloquée(s)) depuis l'adresse IP : %s"
 
-#: core/LimitLoginAttempts.php:1084
+#: core/LimitLoginAttempts.php:1110
 msgid "<strong>ERROR</strong>: Incorrect username or password."
 msgstr "<strong>ERREUR</strong> : identifiant ou mot de passe incorrect."
 
-#: core/LimitLoginAttempts.php:992
+#: core/LimitLoginAttempts.php:1018
 msgid "<strong>ERROR</strong>: Too many failed login attempts."
 msgstr "<strong>ERREUR</strong> : trop de tentatives de connexions ont échoué."
 

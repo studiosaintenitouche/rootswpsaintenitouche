@@ -1,0 +1,22 @@
+.cc-window {
+  font-family: $serif;
+  z-index: 999999999;
+}
+
+.cmplz-blocked-content-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.cmplz-video {
+  max-width: 100%;
+}
+
+.cmplz-no-video {
+  max-width: 50vw;
+}

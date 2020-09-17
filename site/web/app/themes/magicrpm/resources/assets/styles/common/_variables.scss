@@ -1,0 +1,51 @@
+$serif: "Publico Roman", Times New Roman, Georgia, serif;
+$sans-serif: "Druk", Arial, Helvetica, sans-serif;
+
+//Colors
+$black: #111;
+$orange: #e69836;
+$purple: #3d337a;
+$red: #ff2a00;
+$green: #48b781;
+$black-2:#261710;
+$azur: #76c3e4;
+$light-bluegrey: #d6d7e4;
+$dark-bluegrey: #3c3f4c;
+$marine: #1e2760;
+// Containers
+$desktop-width-default-container: 95vw;
+$mobile-width-default-container: 100vw;
+$width-header-container: 75vw;
+$width-footer-container: 1300px;
+//// Paddings containers
+$mobile-padding: 5vw;
+$desktop-padding: 5vw;
+
+// Nav
+$mobile-nav-height: 4rem;
+$desktop-nav-height: 7rem;
+$desktop-nav-cover-height: 4rem;
+////Logo nav
+$mobile-logo-width: 100px;
+$mobile-logo-height: 50px;
+$desktop-logo-width: 150px;
+$desktop-logo-height: 75px;
+////Menu nav
+$padding-menu-item: 5px;
+$padding-lr-menu-link: 5px;
+$padding-tb-menu-link: 5px;
+
+// Footer
+$padding-top-footer: 400px;
+$padding-bottom-footer: 30px;
+//// Logo footer
+$mobile-footer-logo-width: 100px;
+$mobile-footer-logo-height: 50px;
+$desktop-footer-logo-width: 150px;
+$desktop-footer-logo-height: 75px;
+
+// Breakpoint
+$mobile-breakpoint-width: 900px;
+
+// Padding top main
+$padding-top-main: $desktop-nav-height;

@@ -1,0 +1,91 @@
+.btn {
+  padding: 1rem;
+  border: 2px solid;
+  font-family: $sans-serif;
+  text-transform: uppercase;
+
+  &--white {
+    color: white;
+  }
+
+  &--bkg-white {
+    background-color: white;
+    border-color: $black;
+    color: $black;
+  }
+
+  &--bkg-black {
+    background-color: $black;
+    border-color: $black;
+    color: white;
+  }
+
+  &--arrow {
+    display: block;
+    font-size: 1.2em;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    width: fit-content;
+    padding-right: 4rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 1rem;
+      right: 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.2s ease;
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 1rem;
+      right: 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateX(-1rem);
+      opacity: 0;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::before {
+        opacity: 0;
+        transform: translateX(1rem);
+      }
+
+      &::after {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &--arrow-white {
+    &::before {
+      background-image: url(../images/icons/arrow--white.svg);
+    }
+
+    &::after {
+      background-image: url(../images/icons/arrow--white.svg);
+    }
+  }
+
+  &--arrow-black {
+    &::before {
+      background-image: url(../images/icons/arrow.svg);
+    }
+
+    &::after {
+      background-image: url(../images/icons/arrow.svg);
+    }
+  }
+}

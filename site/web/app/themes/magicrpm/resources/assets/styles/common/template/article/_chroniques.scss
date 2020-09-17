@@ -1,0 +1,337 @@
+.article--single {
+  &.article--chroniques {
+    .article {
+      &__header {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 85vh;
+          z-index: -1;
+        }
+      }
+
+      &__media {
+        margin: 0 5vw;
+      }
+
+      &__category-date {
+        display: none;
+      }
+
+      &__sponsor-label {
+        display: none;
+      }
+
+      &__title {
+        font-family: $sans-serif;
+        font-size: 4em;
+        margin: 3rem auto 3rem auto;
+        line-height: 1.3em;
+        max-width: 95vw;
+        text-align: center;
+      }
+
+      &__body {
+        display: block;
+        max-width: 95vw;
+        margin: 0 auto;
+      }
+
+      &__content {
+        .article__introduction {
+          font-size: 1.5em;
+          font-weight: 600;
+          margin-bottom: 4em;
+          position: relative;
+          text-align: center;
+
+          &::after {
+            content: "";
+            bottom: -3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5rem;
+            height: 1.5rem;
+            background-color: $black;
+            position: absolute;
+          }
+        }
+
+        p,
+        ul,
+        li,
+        span,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0 5vw 1rem 5vw;
+        }
+
+        .wp-block-quote {
+          p {
+            line-height: 1.2;
+            margin: 0;
+          }
+        }
+
+        img {
+          width: 100%;
+          margin: 2rem auto 0 auto;
+        }
+      }
+    }
+
+    .author {
+      padding: 1rem;
+      text-align: center;
+      background-color: $purple;
+      color: white;
+
+      &__link {
+        display: block;
+      }
+
+      &__infos {
+        align-items: center;
+        padding-bottom: 1rem;
+      }
+
+      &__avatar {
+        width: 5rem;
+        height: 5rem;
+        background-color: white;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 0.5rem auto;
+
+        &-image {
+          width: 100%;
+        }
+      }
+
+      &__name {
+        font-family: $sans-serif;
+        font-style: italic;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        background-color: #e2e960;
+        color: $purple;
+      }
+
+      &__function {
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        padding: 0.5rem 0 0 0;
+      }
+
+      &__bio {
+        margin: 0;
+        font-family: $serif;
+        font-size: 1;
+        line-height: 1.2;
+      }
+
+      .social-medias {
+        &__item {
+          font-size: 0;
+          width: 1.75rem;
+          height: 1.75rem;
+          display: flex;
+          border-radius: 50%;
+          margin: 0 0.5rem;
+
+          &--twitter {
+            background-image: url(../images/icons/twitter--white.svg);
+            background-size: cover;
+            margin: 1rem auto;
+          }
+        }
+      }
+
+      &__more-articles {
+        display: block;
+        margin: 1rem auto 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .article--single {
+    &.article--chroniques {
+      .article {
+        &__header {
+          &::before {
+            height: calc((((75vw - 2rem) / 14) * 8) + 4rem);
+          }
+        }
+
+        &__media {
+          margin: 0 5vw;
+        }
+
+        &__category-date {
+          font-size: 1.2em;
+          color: white;
+          font-family: $sans-serif;
+          font-style: italic;
+          text-transform: uppercase;
+        }
+
+        &__sponsor-label {
+          padding: 1rem;
+          color: black;
+          border: 2px solid;
+          display: inline-block;
+          text-transform: uppercase;
+          font-family: $sans-serif;
+          position: absolute;
+          bottom: 0;
+          margin-left: 3vw;
+          transform: translateY(100%);
+        }
+
+        &__title {
+          font-size: 4.5em;
+          max-width: 85vw;
+          padding-left: 7vw;
+          text-align: left;
+          margin: 4.5rem auto 3rem auto;
+        }
+
+        &__body {
+          display: grid;
+          grid-template-columns: 5fr 2fr;
+          grid-column-gap: 2vw;
+          padding: 0 5vw;
+        }
+
+        &__content {
+          margin-left: 2vw;
+
+          .article__introduction {
+            text-align: left;
+
+            &::after {
+              content: "";
+              bottom: -3rem;
+              left: 0;
+              transform: translateX(0);
+              width: 5rem;
+              height: 1.5rem;
+              background-color: $black;
+              position: absolute;
+            }
+          }
+
+          p,
+          ul,
+          li,
+          span,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            margin: 0 5vw 1rem 5vw;
+          }
+
+          .wp-block-quote {
+            p {
+              line-height: 1.2;
+              margin: 0;
+            }
+          }
+
+          img {
+            width: 100%;
+            margin: 2rem auto 0 auto;
+          }
+        }
+      }
+
+      .author {
+        padding: 1rem;
+        text-align: center;
+        background-color: $purple;
+        color: white;
+
+        &__link {
+          display: block;
+        }
+
+        &__infos {
+          align-items: center;
+          padding-bottom: 1rem;
+        }
+
+        &__avatar {
+          width: 5rem;
+          height: 5rem;
+          background-color: white;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 auto 0.5rem auto;
+
+          &-image {
+            width: 100%;
+          }
+        }
+
+        &__name {
+          font-family: $sans-serif;
+          font-style: italic;
+          font-size: 1.3em;
+          text-transform: uppercase;
+          padding: 0.5rem 1rem;
+          background-color: #e2e960;
+          color: $purple;
+        }
+
+        &__function {
+          font-family: $sans-serif;
+          text-transform: uppercase;
+          padding: 0.5rem 0 0 0;
+        }
+
+        &__bio {
+          margin: 0;
+          font-family: $serif;
+          font-size: 1;
+          line-height: 1.2;
+        }
+
+        .social-medias {
+          &__item {
+            font-size: 0;
+            width: 1.75rem;
+            height: 1.75rem;
+            display: flex;
+            border-radius: 50%;
+            margin: 0 0.5rem;
+
+            &--twitter {
+              background-image: url(../images/icons/twitter--white.svg);
+              background-size: cover;
+              margin: 1rem auto;
+            }
+          }
+        }
+
+        &__more-articles {
+          display: block;
+          margin: 1rem auto 0 auto;
+        }
+      }
+    }
+  }
+}

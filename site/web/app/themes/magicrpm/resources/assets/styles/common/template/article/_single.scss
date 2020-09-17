@@ -1,0 +1,204 @@
+.article--single {
+  .article {
+    &__share-box {
+      display: none;
+      position: fixed;
+      left: 3.625vw;
+      top: 50vh;
+      transform: translateY(-50%);
+      z-index: 9999999999999;
+    }
+
+    &__share-title {
+      font-family: $sans-serif;
+      text-transform: uppercase;
+    }
+
+    &__share-icon {
+      font-size: 0;
+      width: 35px;
+      height: 35px;
+      background-color: white;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0.5rem auto;
+      display: block;
+
+      &--facebook {
+        background-image: url(../images/icons/facebook.svg);
+      }
+
+      &--twitter {
+        background-image: url(../images/icons/twitter.svg);
+      }
+    }
+
+    &__image-container {
+      align-items: flex-start;
+    }
+
+    &__content {
+      font-size: 1rem;
+
+      p {
+        line-height: 1.4;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-transform: uppercase;
+        margin-top: 3rem;
+      }
+
+      img {
+        width: 100%;
+        margin: 2rem auto 0 auto;
+        height: auto;
+      }
+
+      .wp-block-quote {
+        position: relative;
+        padding: 2rem 0 2rem 3rem;
+        margin: 0 0 1rem 0;
+        font-family: $sans-serif;
+        font-size: 1.5em;
+        font-style: italic;
+        font-weight: 600;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2rem;
+          left: 0;
+          width: 1.25rem;
+          height: 6rem;
+          background-color: $black;
+        }
+
+        p {
+          line-height: 1.2;
+          margin: 0;
+        }
+      }
+
+      .wp-block-image {
+        margin: 7vw 5vw;
+
+        figcaption {
+          padding-right: 1rem;
+          border-right: 8px solid black;
+          margin: 0.5rem 1rem 2rem 0;
+          line-height: 1.5rem;
+          text-align: right;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .article--single {
+    .article {
+      &__share-box {
+        display: flex;
+        flex-direction: column;
+        width: 3rem;
+        position: sticky;
+        top: 50vh;
+        float: left;
+        transform: translate(-100%, -50%);
+      }
+
+      &__share-title {
+        font-family: $sans-serif;
+        text-transform: uppercase;
+      }
+
+      &__share-icon {
+        font-size: 0;
+        width: 35px;
+        height: 35px;
+        background-color: white;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0.5rem auto;
+        display: block;
+
+        &--facebook {
+          background-image: url(../images/icons/facebook.svg);
+        }
+
+        &--twitter {
+          background-image: url(../images/icons/twitter.svg);
+        }
+      }
+
+      &__content {
+        font-size: 1.25rem;
+
+        p {
+          line-height: 1.4;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          text-transform: uppercase;
+        }
+
+        img {
+          width: 100%;
+          margin: 2rem auto 0 auto;
+        }
+
+        .wp-block-quote {
+          position: relative;
+          padding: 3rem 0 4rem 6rem;
+          margin: 0 5vw 1rem 5vw;
+          font-family: $sans-serif;
+          font-size: 2.5em;
+          font-style: italic;
+          font-weight: 600;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 3.5rem;
+            left: 0;
+            width: 1.75rem;
+            height: 6rem;
+            background-color: $black;
+          }
+
+          p {
+            line-height: 1.2;
+            margin: 0;
+          }
+        }
+
+        .wp-block-image {
+          margin: 2rem 5vw;
+
+          figcaption {
+            padding-right: 1rem;
+            border-right: 8px solid black;
+            margin: 0.5rem 1rem 2rem 0;
+            line-height: 1.5rem;
+            text-align: right;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

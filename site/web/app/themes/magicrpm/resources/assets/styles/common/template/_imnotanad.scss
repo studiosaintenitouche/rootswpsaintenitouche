@@ -1,0 +1,69 @@
+.imnotanad {
+  &__image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+
+    &--mobile {
+      display: block;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &--banner {
+    margin: 5rem 0;
+  }
+
+  &--sidebar {
+    .imnotanad {
+      &__image {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .imnotanad {
+    &--banner {
+      max-width: 1000px;
+      padding: 0 30px;
+      margin: 5rem auto;
+    }
+
+    &--cover {
+      position: absolute;
+      width: 100vw;
+      padding-top: 4rem;
+
+      .imnotanad {
+        &__link {
+          display: flex;
+          height: calc(100vh - 4rem);
+          overflow: hidden;
+        }
+
+        &__image {
+          object-fit: cover;
+          width: 100%;
+          object-position: top;
+        }
+      }
+    }
+
+    &__image {
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
+    }
+  }
+}

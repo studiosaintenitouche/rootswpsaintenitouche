@@ -1,0 +1,121 @@
+.posts-list {
+  &__list {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    font-family: $sans-serif;
+    font-size: 2.6rem;
+  }
+
+  &--masonry {
+    margin-top: 5rem;
+
+    .posts-list {
+      &__list {
+        margin: 0 auto;
+      }
+
+      &__item {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &--grid {
+    .article {
+      &__image-container {
+        display: block;
+
+        &::before {
+          content: '';
+          background: rgba(0, 0, 0, 0.25);
+          width: 100%;
+          height: calc(100% - 3px);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+          position: relative;
+        }
+      }
+
+      &__image {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__more-btn-container {
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+}
+
+.alm-btn-wrap {
+  text-align: center;
+}
+
+.alm-load-more-btn {
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+
+.alm-load-more-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .posts-list {
+    &--masonry {
+      .posts-list {
+        &__list {
+          display: inherit;
+        }
+
+        &__item {
+          max-width: calc(100% / 3);
+          padding: 2rem 1rem;
+          display: inherit;
+
+          &:nth-child(2) {
+            margin-top: 4rem;
+          }
+        }
+      }
+    }
+
+    &--grid {
+      max-width: 85vw;
+      margin: 3rem auto;
+
+      .posts-list {
+        &__list {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 2rem;
+          row-gap: 3rem;
+        }
+      }
+    }
+  }
+}

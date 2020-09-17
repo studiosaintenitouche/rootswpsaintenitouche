@@ -1,0 +1,31 @@
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+
+  a {
+    color: white;
+  }
+
+  &__title {
+    font-size: 0;
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+  }
+
+  &__contact {
+    font-size: 0.8em;
+    margin-top: 1rem;
+
+    a {
+      color: white;
+    }
+  }
+}
+
+@import "footer/logo";
+@import "footer/social-medias";
+@import "footer/menu";

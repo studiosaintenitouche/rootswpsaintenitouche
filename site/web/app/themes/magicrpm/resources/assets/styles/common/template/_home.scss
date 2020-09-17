@@ -1,0 +1,25 @@
+.home {
+  position: relative;
+  margin-bottom: 3rem;
+
+  &__current-magazine {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .home {
+    position: inherit;
+
+    &__current-magazine {
+      position: inherit;
+      right: inherit;
+      z-index: inherit;
+      left: inherit;
+    }
+  }
+}
+
+@import "home/cover-post";
+@import "home/posts-on-top";

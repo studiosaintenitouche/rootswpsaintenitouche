@@ -1,0 +1,23 @@
+.discover {
+  margin-top: 5rem;
+
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    color: $light-bluegrey;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .discover {
+    margin-top: 10rem;
+
+    &__title {
+      font-size: 5rem;
+    }
+  }
+}

@@ -1,0 +1,295 @@
+.current-magazine {
+  background-color: $orange;
+  display: inline-table;
+
+  &__currently-on-sale {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.8em;
+    font-family: $sans-serif;
+  }
+
+  &__title {
+    margin: 0.25em 0;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+  }
+
+  &__description {
+    display: none;
+  }
+
+  &__buttons {
+    margin-top: 1rem;
+    display: flex;
+  }
+
+  &--home {
+    display: block;
+    width: 90%;
+    z-index: 9999999;
+    transform: translateY(-4rem);
+    margin: 0 auto;
+
+    .current-magazine {
+      &__container {
+        padding: 5vw 5vw 0 5vw;
+        position: relative;
+      }
+
+      &__image {
+        width: 100%;
+        transform: translateY(-1rem);
+      }
+
+      &__currently-on-sale {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+      }
+
+      &__title {
+        text-align: center;
+        font-size: 2em;
+        margin: 0.25em 0 0.75em;
+      }
+
+      &__buttons {
+        display: flex;
+        margin: 0 -0.25rem 0;
+        transform: translateY(1rem);
+
+        .btn--arrow {
+          padding-right: 1rem;
+          margin: 0 0.25rem;
+          padding-bottom: 2rem;
+          width: 50%;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 2rem;
+            height: 1rem;
+            right: auto;
+            left: 1rem;
+            bottom: 0.5rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 0.2s ease;
+            opacity: 1;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 2rem;
+            height: 1rem;
+            right: auto;
+            left: 1rem;
+            bottom: 0.5rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translateX(-1rem);
+            opacity: 0;
+            transition: 0.2s ease;
+          }
+
+          &:hover {
+            &::before {
+              opacity: 0;
+              transform: translateX(1rem);
+            }
+
+            &::after {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--sidebar {
+    width: 100%;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+
+    .current-magazine {
+      &__container {
+        padding: 5rem 2rem 0 2rem;
+        position: relative;
+        transform: translateY(-2rem);
+      }
+
+      &__image {
+        width: 100%;
+        float: right;
+        margin-top: -7rem;
+        margin-bottom: 1rem;
+      }
+
+      &__buttons {
+        display: block;
+      }
+
+      &__btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile-breakpoint-width) {
+  .current-magazine {
+    background-color: $orange;
+    display: inline-table;
+
+    &__currently-on-sale {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 0.8em;
+      font-family: $sans-serif;
+    }
+
+    &__title {
+      margin: 0.25em 0;
+      text-transform: uppercase;
+      font-family: $sans-serif;
+    }
+
+    &__description {
+      font-family: $serif;
+      font-size: 1em;
+      line-height: 1.2em;
+      display: none;
+    }
+
+    &__buttons {
+      margin-top: 1rem;
+    }
+
+    &--home {
+      top: calc(100vh + ((85vw - 4rem) / 3) + 3rem);
+      width: calc((85vw - 4rem) / 3);
+      position: absolute;
+      bottom: 100vh;
+      left: calc(50vw + ((85vw - 4rem) / 6) + 2rem);
+      transform: translateY(-100%);
+
+      .current-magazine {
+        &__container {
+          padding: 0 2rem 2rem 2rem;
+          position: relative;
+        }
+
+        &__currently-on-sale {
+          width: 100%;
+          margin-left: 0;
+          text-align: left;
+        }
+
+        &__title {
+          width: 100%;
+          text-align: left;
+          margin: 0.25em 0;
+        }
+
+        &__buttons {
+          display: block;
+          margin: 0;
+          transform: translateY(0);
+
+          .btn--arrow {
+            margin: 1rem 0 0 0;
+            padding: 0.8rem;
+            padding-right: 4rem;
+            width: 100%;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 2rem;
+              height: 1rem;
+              right: 1rem;
+              left: auto;
+              bottom: auto;
+              background-repeat: no-repeat;
+              background-position: center;
+              transition: 0.2s ease;
+              opacity: 1;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 2rem;
+              height: 1rem;
+              right: 1rem;
+              left: auto;
+              bottom: auto;
+              background-repeat: no-repeat;
+              background-position: center;
+              transform: translateX(-1rem);
+              opacity: 0;
+              transition: 0.2s ease;
+            }
+
+            &:hover {
+              &::before {
+                opacity: 0;
+                transform: translateX(1rem);
+              }
+
+              &::after {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home--imnotanad-cover-active {
+    .current-magazine {
+      &--home {
+        top: calc(100vh + ((85vw - 4rem) / 3) + 3rem);
+        width: calc((85vw - 4rem) / 3);
+
+        .current-magazine__container {
+          padding: 0 3rem 3rem 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .current-magazine {
+    &--home {
+      .current-magazine {
+        &__container {
+          padding: 0 3rem;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .home--imnotanad-cover-active {
+    .current-magazine {
+      &--home {
+        top: calc(100vh + ((85vw - 4rem) / 3) + 3rem);
+        width: calc((85vw - 4rem) / 3);
+
+        .current-magazine__container {
+          padding: 0 3rem 3rem 3rem;
+        }
+      }
+    }
+  }
+}
